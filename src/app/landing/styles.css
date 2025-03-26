@@ -1,0 +1,168 @@
+/* Animations pour la landing page */
+
+@keyframes blob {
+  0% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(1.1);
+  }
+  66% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 4s ease infinite;
+}
+
+/* Pattern backgrounds */
+.bg-grid-primary-900 {
+  background-image: linear-gradient(to right, rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+}
+
+.bg-grid-primary-100 {
+  background-image: linear-gradient(to right, rgba(219, 234, 254, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(219, 234, 254, 0.1) 1px, transparent 1px);
+}
+
+.bg-grid-gray-900 {
+  background-image: linear-gradient(to right, rgba(17, 24, 39, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 24, 39, 0.1) 1px, transparent 1px);
+}
+
+.bg-grid-gray-100 {
+  background-image: linear-gradient(to right, rgba(243, 244, 246, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(243, 244, 246, 0.1) 1px, transparent 1px);
+}
+
+.bg-grid-white {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+/* Fallbacks for some animations in case tailwind doesn't provide them */
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Animations pour les éléments flottants */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delay {
+  animation: float 6s ease-in-out 2s infinite;
+}
+
+.rotation-element {
+  animation: rotate 20s linear infinite;
+}
+
+.rotation-element-reverse {
+  animation: rotate-reverse 15s linear infinite;
+}
+
+/* Styles additionnels pour la landing page */
+.rotate-30 {
+  transform: rotate(30deg);
+}
+
+.rotate-45 {
+  transform: rotate(45deg);
+}
+
+.-rotate-30 {
+  transform: rotate(-30deg);
+}
+
+.w-150 {
+  width: 150%;
+}
+
+.h-150 {
+  height: 150%;
+}
+
+/* Ajout d'un motif subtil pour l'arrière-plan bleu */
+.bg-pattern-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+} 
